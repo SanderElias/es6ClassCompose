@@ -1,5 +1,6 @@
 //import { Composed } from './compose';
 import { Composed } from '../util/compose';
+import { composeObject } from '../util/compose';
 declare module '../util/compose' {
     export interface Composed {
         /**

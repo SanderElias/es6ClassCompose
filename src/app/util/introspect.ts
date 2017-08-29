@@ -1,17 +1,21 @@
 import { Composed } from './compose';
+import { composeObject } from './compose';
 
 declare module './compose' {
     export interface Composed {
         /**
-         * Walks up the prototype chain and returns all properties as an string[]
+         * Walks up the prototype chain and returns all methods as an string[]
          */
         showMethods(): string[];
+
         /**
          * Walks up the prototype chain and returns all properties as an string[]
          */
         showProps(): string[];
     }
 }
+
+// composeObject(Composed, showMethods, showProps);
 
 export const INTROSPECTS = [showMethods, showProps];
 
