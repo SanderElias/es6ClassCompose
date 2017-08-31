@@ -6,7 +6,7 @@ export interface ClassLike {
     [propName: string]: any;
 }
 
-export const ComposeComponent = (...fns) => {
+export function ComposeComponent(...fns) {
     return target => composeObject(target, ...fns);
 };
 
